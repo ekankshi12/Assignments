@@ -1,0 +1,73 @@
+#TUPLES
+#Question 1
+tup = ("tuple", True, 2.3, 12)
+print(tup)
+print(len(tup))
+
+#Question 2
+tup1 = (12, 15, 63, 1, 77, 0, 99, 80, -20)
+print(tup1)
+print(max(tup1))
+print(min(tup1))
+
+#Question 3
+def multiply(numbers):
+    total = 1
+    for x in numbers:
+       total *= x
+    return total
+print(multiply((8, 2, 3, -1, 7)))
+
+#SETS
+#QUuestion 1
+num1_set = {}
+num2_set = {}
+s1 = input("Enter value to set1")
+num1_set.add(s1)
+s1 = input("Enter value to set1")
+num1_set.add(s1)
+s1 = input("Enter value to set1")
+num1_set.add(s1)
+s2 = input("Enter value to set2")
+num2_set.add(s2)
+s2 = input("Enter value to set2")
+num2_set.add(s2)
+s2 = input("Enter value to set2")
+num2_set.add(s2)
+s2 = input("Enter value to set2")
+num2_set.add(s2)
+print(num1_set)
+print(num2_set)
+Diff = num1_set-num2_set
+print("Difference of two sets is:", Diff)
+inter = num1_set & num2_set
+("Intersection of two sets is:", inter)
+x=set(["Red","Blue","Yellow"])
+y=set(["Blue","Yellow"])
+issubset=x <= y
+print(issubset)
+issuperset=x >= y
+print(issuperset)
+
+#Dictionaries
+#Question 1
+dictionary = {}
+count = 0
+while count < 5:
+   name = input("Enter your name: ")
+   mark = input("Enter your mark out of 100: ")
+   if name not in dictionary:
+       dictionary[name] = mark
+       count = count + 1
+   else:
+       name = input("Enter a unique name: ")
+       mark = input("Enter the mark out of 100: ")
+       if name not in dictionary:
+          dictionary[name] = mark
+          count = count + 1
+print(dictionary)
+
+#Question 2
+for mark in sorted(dictionary):
+    print("%s: %s" % (mark, dictionary[mark]))
+
