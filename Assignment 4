@@ -78,9 +78,7 @@ mcount=l.count('M')
 icount=l.count('I')
 scount=l.count('S')
 pcount=l.count('P')
-dictionary={
-    'M':mcount,'I':icount,'S':scount,'P':pcount
-}
+dictionary={'M':mcount,'I':icount,'S':scount,'P':pcount}
 print("The Mississippi dictionary is",dictionary)
 
 
