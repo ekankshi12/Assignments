@@ -1,0 +1,69 @@
+# ***Question 1 ***
+An access token is an object that describes the security context of a process or thread. The information in a token includes the identity and privileges of the user
+account associated with the process or thread. When a user logs on, the system verifies the user's password by comparing it with information stored in a security
+database. If the password is authenticated, the system produces an access token. Every process executed on behalf of this user has a copy of this access token.
+The system uses an access token to identify the user when a thread interacts with a securable object or tries to perform a system task that requires privileges. 
+
+Consumer Key (API Key):	XXaTllT9AO7lTQq77z5PqvXUt
+Consumer Secret (API Secret):	3XRpKOhajNhQwNsE7GPzs5nVFCi6nyWODUN5pYagVzfs9uTByi
+Access Token:	803163162241482753-IABhrbzZiIgbamvvtQp591ueZZqP9rS
+Access Token Secret:	otVO0gYWUhVbO21BxVRi1qx2p7ko0TMGVU4tLZ50faDHz
+Access Level:	Read and write
+Owner:	ekankshi_1214
+Owner ID:	803163162241482753
+
+# ***Question 2 ***
+command: nslookup name(google/facebook).com
+
+Name:   google.com
+Address: 74.125.236.200
+
+Name:   facebook.com
+Address: 159.251.7.49
+
+# ***Question 3 ***
+import tweepy
+
+Consumer_Key = 'XXaTllT9AO7lTQq77z5PqvXUt'
+Consumer_Secret  = '3XRpKOhajNhQwNsE7GPzs5nVFCi6nyWODUN5pYagVzfs9uTByi'
+Access_Token = '803163162241482753-IABhrbzZiIgbamvvtQp591ueZZqP9rS'
+Access_Token_Secret = 'otVO0gYWUhVbO21BxVRi1qx2p7ko0TMGVU4tLZ50faDHz'
+
+auth = tweepy.OAuthHandler(Consumer_Key, Consumer_Secret)
+auth.set_access_token(Access_token, Access_Token_Secret)
+api = tweepy.API(auth)
+
+tweets=api.search('@iamsrk', lang="en",count=10,tweetmode="extended")
+print(tweets)
+
+
+# ***Question 4 ***
+A Library is a chunk of code that you can call from your own code,
+to help you do things more quickly/easily.A library is a collection of functions / objects
+that serves one particular purpose. You could use a library in a variety of projects.
+For example, a Bitmap Processing library will provide facilities for loading and manipulating bitmap images,
+saving you having to write all that code for yourself.Typically a library will
+only offer one area of functionality.
+
+An API (application programming interface) is a term meaning the functions/methods
+in a library that you can call to ask it to do things for you - the interface to the library.APIs are
+used to connect an application with external code.
+
+Example :- Angular js- a JS framework may use many libraries like iniline editing of text using an exposed API of that library.
+
+
+# ***Question 5 ***
+import spotipy
+
+birdy_uri = 'spotify:artist:2WX2uTcsvV5OnS0inACecP'
+spotify = spotipy.Spotify()
+
+results = spotify.artist_albums(birdy_uri, album_type='album')
+albums = results['items']
+while results['next']:
+    results = spotify.next(results)
+    albums.extend(results['items'])
+
+for album in albums:
+    print(album['name'])
+
