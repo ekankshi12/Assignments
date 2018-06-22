@@ -1,0 +1,33 @@
+# Question 1
+import numpy as np
+np.random.randint(2, size=10)
+array = ([1, 5, 16, 20, 3, 78, 0, 9, 6, 14])
+print(array)
+m = np.mean(array)
+print(m)
+
+
+# Question 2
+import numpy as np
+np.random.rand(20,1)
+array = ([[1]+[2]+[3]+[4]+[5]+[1]+[2]+[3]+[4]+[5]+[1]+[2]+[3]+[4]+[5]+[1]+[2]+[3]+[4]+[5]])
+print(array)
+std_dev = np.std(array)
+print(std_dev)
+v = np.var(array)
+print(v)
+
+
+# Question 3
+import numpy as np
+a = np.random.rand(10,20)
+b = np.random.rand(20,25)
+
+res = np.dot(a,b)
+print(res)
+
+s = np.sum(res, 0)
+print(s)
+
+
+
