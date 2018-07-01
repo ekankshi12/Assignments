@@ -39,3 +39,4 @@ def func(x):
 result = np.apply_along_axis(func, 0, A)
 print(result)
 
+
